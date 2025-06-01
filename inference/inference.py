@@ -16,7 +16,7 @@ from utils.utils import model_dir
 from model.disease_predictor import DiseasePredictor
 from dataset.watch_log import WatchLogDataset, get_datasets
 from dataset.dataloader import DataLoader
-from src.evaluate.evaluate import evaluate
+from evaluate.evaluate import evaluate
 from postprocess.postprocess import write_db
 
 def recommend_to_df(recommend):
