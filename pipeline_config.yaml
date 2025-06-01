@@ -1,0 +1,24 @@
+pipeline:
+  name: "disease-predictor"
+  type: "training"
+  description: "Disease Predictor ML Pipeline"
+
+environment:
+  # 실제 포트 매핑에 맞춤
+  MLFLOW_TRACKING_URI: "http://localhost:8550"
+  MINIO_ENDPOINT: "localhost:9002"
+  MINIO_ACCESS_KEY: "minio1234"
+  MINIO_SECRET_KEY: "minio1234"
+
+  PYTHONUNBUFFERED: "1"
+  PYTHONPATH: "/tmp/ml-tasks"
+
+tasks:
+  - name: "train_model"
+    command: "python train.py train --model_name disease-predictor"
+    continue_on_error: false
+
+# 선택사항: 검증 태스크 추가
+  - name: "validate_mlflow_connection"
+    command: "python -c 'import mlflow; print(f\"MLflow URI: {mlflow.get_tracking_uri()}\")'"
+    continue_on_error: true
