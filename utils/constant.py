@@ -1,6 +1,6 @@
 from enum import Enum
 
-from src.model.disease_predictor import DiseasePredictor
+from model.disease_predictor import DiseasePredictor
 
 
 class CustomEnum(Enum):
