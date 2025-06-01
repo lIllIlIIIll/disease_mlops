@@ -13,17 +13,17 @@ from mlflow.tracking import MlflowClient
 from dotenv import load_dotenv
 import numpy as np
 
-from src.dataset.watch_log import get_datasets
-from src.dataset.dataloader import DataLoader
-from src.model.disease_predictor import DiseasePredictor, model_save
-from src.utils.utils import init_seed, auto_increment_run_suffix
-from src.train.train import train
-from src.evaluate.evaluate import evaluate
-from src.utils.constant import Models
-from src.inference.inference import (
+from dataset.watch_log import get_datasets
+from dataset.dataloader import DataLoader
+from model.disease_predictor import DiseasePredictor, model_save
+from utils.utils import init_seed, auto_increment_run_suffix
+from train.train import train
+from evaluate.evaluate import evaluate
+from utils.constant import Models
+from inference.inference import (
     load_checkpoint, init_model, inference, recommend_to_df
 )
-from src.postprocess.postprocess import write_db
+from postprocess.postprocess import write_db
 
 
 init_seed()
