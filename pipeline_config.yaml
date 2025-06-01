@@ -15,7 +15,7 @@ environment:
 
 tasks:
   - name: "train_model"
-    command: "python train.py train --model_name disease-predictor"
+    command: "python main.py train --model_name disease-predictor"
     continue_on_error: false
 
 # 선택사항: 검증 태스크 추가
