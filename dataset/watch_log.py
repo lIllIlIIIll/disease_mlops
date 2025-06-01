@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
-from src.utils.utils import project_path
+from utils.utils import project_path
 from minio import Minio
 
 
