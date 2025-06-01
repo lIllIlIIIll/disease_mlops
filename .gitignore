@@ -1,0 +1,27 @@
+data/
+*.csv
+*.json
+*.parquet
+
+# 모델 파일
+models/
+*.pkl
+*.joblib
+*.h5
+*.pt
+
+# 로그 및 캐시
+logs/
+__pycache__/
+.pytest_cache/
+mlruns/
+.DS_Store
+
+# 환경 설정
+.env
+.vscode/
+.idea/
+
+# 임시 파일
+*.tmp
+*.log
