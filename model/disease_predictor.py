@@ -4,7 +4,7 @@ import pickle
 import os
 import datetime
 
-from src.utils.utils import model_dir
+from utils.utils import model_dir
 from sklearn.ensemble import RandomForestClassifier
 
 class DiseasePredictor:
